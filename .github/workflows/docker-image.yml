@@ -88,4 +88,4 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
             https://api.github.com/repos/ISE-FIZKarlsruhe/deploy/dispatches \
-            -d '{"event_type":"run-private-workflow"}'
+            -d '{"event_type":"run-kg-template-workflow"}'
