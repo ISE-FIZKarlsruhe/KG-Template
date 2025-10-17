@@ -1,6 +1,6 @@
 site_name: TG template
 site_url: https://nfdi.fiz-karlsruhe.de/kg-template/
-repo_url: https://github.com/ebrahimnorouzi/KG-Template
+repo_url: https://github.com/ISE-FIZKarlsruhe/KG-Template
 nav:
   - Home: index.md
   - SPARQL Endpoint: /kg-template/shmarql/

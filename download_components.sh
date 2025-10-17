@@ -11,13 +11,13 @@ mkdir -p "$COMPONENTSDIR" "$REASONER"
 echo "📥 Downloading TSV files from Google Sheets..."
 
 declare -A files=(
-    [sheet1]=1111111111
-    [sheet2]=2222222222
+    [Sheet1]=0
+    [Sheet2]=414803325
 )
 
 for name in "${!files[@]}"; do
     gid="${files[$name]}"
-    curl -s -L "https://docs.google.com/spreadsheets/d/e/id/pub?gid=${gid}&single=true&output=tsv" \
+    curl -s -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vRwUb27r6CwCbI1BWIQUHtd_xyDum7vCPmFyuw1xz9gZDJg9DbEJvuTNiQlRxAdlJCs9pSvNeEt3QVT/pub?gid=${gid}&single=true&output=tsv" \
         -o "$COMPONENTSDIR/$name.tsv"
     echo "✔️ Downloaded: $name.tsv"
 done
@@ -49,7 +49,7 @@ function run_robot_explain() {
     fi
 }
 
-run_robot_merge "-i $SRC" "$COMPONENTSDIR/sheet1.tsv" "$COMPONENTSDIR/sheet1.owl"
-run_robot_merge "-i $SRC -i $COMPONENTSDIR/sheet1.owl" "$COMPONENTSDIR/sheet2.tsv" "$COMPONENTSDIR/sheet2.owl"
+run_robot_merge "-i $SRC" "$COMPONENTSDIR/Sheet1.tsv" "$COMPONENTSDIR/Sheet1.owl"
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/Sheet1.owl" "$COMPONENTSDIR/Sheet2.tsv" "$COMPONENTSDIR/Sheet2.owl"
 
 echo "✅ All components generated and explained."
