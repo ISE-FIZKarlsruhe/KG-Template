@@ -27,10 +27,10 @@ jobs:
            #java -jar robot.jar --version
 
            # reasoning to materialize sublclasses, subproperties, inverse prperties, etc.
-           #java -Xmx16G -jar robot.jar -vvv reason --reasoner hermit --axiom-generators "SubClass SubDataProperty ClassAssertion EquivalentObjectProperty PropertyAssertion InverseObjectProperties SubObjectProperty" --include-indirect true --input matwerk.ttl --output reasoned.ttl 
-           #java -Xmx16G -jar robot.jar -vvv reason --reasoner hermit --axiom-generators "SubClass ClassAssertion PropertyAssertion InverseObjectProperties" --include-indirect true --input matwerk.ttl --output reasoned.ttl 
-           #java -Xmx16G -jar robot.jar -vvv reason --reasoner hermit --axiom-generators "InverseObjectProperties" --include-indirect true --input matwerk.ttl --output reasoned.ttl 
-           #java -Xmx16G -jar robot.jar -vvv reason --reasoner hermit --axiom-generators "PropertyAssertion" --include-indirect true --input matwerk.ttl --output reasoned.ttl 
+           #java -Xmx16G -jar robot.jar -vvv reason --reasoner hermit --axiom-generators "SubClass SubDataProperty ClassAssertion EquivalentObjectProperty PropertyAssertion InverseObjectProperties SubObjectProperty" --include-indirect true --input kg.ttl --output reasoned.ttl 
+           #java -Xmx16G -jar robot.jar -vvv reason --reasoner hermit --axiom-generators "SubClass ClassAssertion PropertyAssertion InverseObjectProperties" --include-indirect true --input kg.ttl --output reasoned.ttl 
+           #java -Xmx16G -jar robot.jar -vvv reason --reasoner hermit --axiom-generators "InverseObjectProperties" --include-indirect true --input kg.ttl --output reasoned.ttl 
+           #java -Xmx16G -jar robot.jar -vvv reason --reasoner hermit --axiom-generators "PropertyAssertion" --include-indirect true --input kg.ttl --output reasoned.ttl 
            cp kg.ttl reasoned.ttl
 
            ########################################################

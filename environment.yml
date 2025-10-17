@@ -1,4 +1,4 @@
-name: matwerk
+name: kg-template
 channels:
   - defaults
 dependencies:
